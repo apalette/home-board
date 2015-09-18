@@ -17,10 +17,10 @@ class InProject{
 	
 	public function __construct() {
 		$this->_page = InRouter::getController();
-		
 		$this->_theme = new InTheme();
 		$this->_theme->page = $this->_page;
 		$this->_theme->path = InRouter::getContext();
+		$this->_theme->view = InRouter::getController();
 		
 		InRouter::apply($this);
 	}
